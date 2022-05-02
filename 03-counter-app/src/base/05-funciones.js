@@ -11,18 +11,18 @@ const saludar2 = function( nombre ) {
 const saludar3 = ( nombre ) => `Hola, ${ nombre }`;
 const saludar4 = () => `Hola Mundo`;
 
-console.log( saludar2('Vegeta') );
-console.log( saludar3('Goku') );
-console.log( saludar4('Vegeta') );
+// console.log( saludar2('Vegeta') );
+// console.log( saludar3('Goku') );
+// console.log( saludar4('Vegeta') );
 
 
-const getUser = () => ({
+export const getUser = () => ({
     uid: 'ABC123',
     username: 'CSWEB'
 });
 
-const user = getUser();
-console.log( user );
+// const user = getUser();
+// console.log( user );
 
 // Tarea
 // 1. Trasnformen a una función de Flecha
@@ -35,12 +35,12 @@ function getUsuarioActivo ( nombre ) {
     }
 }
 
-const getUsuarioActivo2 = ( nombre ) => ({
+export const getUsuarioActivo2 = ( nombre ) => ({
     uid: 'ABC569',
     username: nombre
 });
 
-const usuarioActivo  = getUsuarioActivo('Fernando');
-const usuarioActivo2 = getUsuarioActivo2('Jesús');
-console.log( usuarioActivo );
-console.log( usuarioActivo2 );
+// const usuarioActivo  = getUsuarioActivo('Fernando');
+// const usuarioActivo2 = getUsuarioActivo2('Jesús');
+// console.log( usuarioActivo );
+// console.log( usuarioActivo2 );

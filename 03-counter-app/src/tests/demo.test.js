@@ -9,5 +9,4 @@ describe('Pruebas en el archivo demo.test.js', () => {
         // Observar el comportamiento
         expect( mensaje ).toBe( mensaje2 );     
     })
-    
 });
