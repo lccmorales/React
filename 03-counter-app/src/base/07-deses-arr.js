@@ -1,13 +1,13 @@
 const personajes = ['Goku', 'Vegeta', 'Gohan'];
 const [ , ,p3 ] = personajes;
-console.log( p3 );
+// console.log( p3 );
 
-const retornaArreglo = () => {
+export const retornaArreglo = () => {
     return ['ABC', 123]
 }
 
-const [letras, numeros] = retornaArreglo();
-console.log(letras, numeros);
+// const [letras, numeros] = retornaArreglo();
+// console.log(letras, numeros);
 
 // Tarea
 // 1. el primer valro del arr se llamará nombre
@@ -17,5 +17,5 @@ const stateUse = ( valor ) => {
 }
 
 const [ nombre, setNombre ] = stateUse ('Goku');
-console.log( nombre );
-setNombre();
+// console.log( nombre );
+// setNombre();

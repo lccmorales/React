@@ -1,15 +1,11 @@
-# React
-Practice Repository for React
+# Practice Repository for React
 
-# dashboard-analitica-api
-
-API Rest para el proyecto DashBoard Analítica con el cual se obtendrá la información requerida para el Tablero de Desempeño Institucional
+Ejercicios de practica para el curso de React
 
 ## Contenido
-Este proyecto cuenta con tres ramas principales (branches)
+Este proyecto cuenta con dos ramas principales (branches)
 - main
 - developer
-- bugfixes
 
 ## Pre-requisitos
 - SSH key ED25519 
@@ -39,9 +35,9 @@ Nota: si no cuenta con el editor de texto `xed` puede utilizar el de linea de co
 
 Agregar la siguiente configuración
 ```
-Host 10.3.12.16:2224
+Host github.com
+Hostname github.com
 User [nombre_usuario]
-Hostname 10.3.12.16:2224
 IdentityFile ~/.ssh/id_ed25519
 ```
 
@@ -63,23 +59,17 @@ $ cat ~/.ssh/id_ed25519.pub
 - En `Expires at` vacio
 - Clic `Add Key`
 
-## Requisitos
-PHP version 7.0 o superior
+## Instalaciones Necesarias
+- Google Chrome o Firefox
+- React Developer Tools (Extención)
+- Redux Devtools (Extención)
+- Visual Studio Code
+- Mongo Compass
+- Git
+- Node
 
-Modulos de PHP
-- Phalcon (https://phalcon.io/en-us/download/linux)
-- Curl (https://www.php.net/curl)
-- mbstring
-
-Para comprobar si tiene estos modulos, ejecute el siguiente comando:
-```bash
-$ php -m | egrep "(phalcon|curl|mbstring)"
-curl
-mbstring
-phalcon
-```
-Si le aparecen todos los modulos ya estan instalados, si no le aparece alguno verificar que este bien instalado.
-
+## Instalaciones Opcionales
+- Postman, puede usar en su lugar una Extensión de VSC llamada Thunder Client
 ## Configurar GIT
 `Nota importante: realizar este proceso solamente si es el primer proyecto con el que trabaja con GIT.` 
 
@@ -115,15 +105,15 @@ Si lo que se desea es enviar la rama actual a otra diferente en ese caso si es n
 
 Para descargar el repositorio ejecutar los siguientes comandos:
 ```bash
-$ cd /var/www/php70
+$ cd /home/jmorales/Escritorio
 ```
 ```bash
-$ git clone ssh://git@10.3.12.16:2224/csweb/dashboard-analitica-api.git
+$ git clone git@github.com:lccmorales/React.git
 ```
 ```bash
-$ cd dashboard-analitica-api
+$ cd React
 ```
-Nota: Reemplazar `/var/www/php70` por el directorio donde desee clonar el repositorio
+Nota: Reemplazar `/home/jmorales/Escritorio` por el directorio donde desee clonar el repositorio
 
 ## Configurar API
 Ejecutar el comando:
@@ -132,15 +122,11 @@ $ git branch
 * main
 ```
 
-Si el resultado es igual al anterior, significa que solo existe la rama principal `main`, necesita crear localmente las otras dos ramas, pero primero descargaremos el código de esta rama con el comando: 
+Si el resultado es igual al anterior, significa que solo existe la rama principal `main`, necesita crear localmente la otra rama, pero primero descargaremos el código de esta rama con el comando: 
 ```bash
 $ git pull
 ```
 
-Ahora si, creamos la rama `bugfixes` ejecutando los siguiente comando:
-```bash
-$ git checkout bugfixes
-Cambiado a nueva rama 'bugfixes'
 ```
 Seguimos con la rama `developer` que es la rama donde vamos a trabajar principalmente
 ```bash
@@ -149,19 +135,6 @@ Cambiado a rama 'developer'
 ```
 
 Ahora se encuentra en la rama `developer`.
-
- Ejecutar el siguiente comando para configurar todo automáticamente:
-```bash
-$ php setup
-```
-
-Este comando hace lo siguiente:
-- Crea el archivo `config.php`
-- Crea la carpeta `cache`
-- Instala Composer y las dependencias necesarias.
-
-Notese que se crearon los archivos `composer.phar`, `composer.lock` y la carpeta `vendor` que es donde se guardan las dependencias, conserve estos archivos.
-
 
 ## Uso básico de  GIT
 
