@@ -1,31 +1,24 @@
 import React, { useState } from 'react';
-import { AddCategory } from './components/AddCategory';
+import { AddForm } from './components/AddForm';
 import { GifGrid } from './components/GifGrid';
 
 const GifExpertApp = () => {
-    // const categories = ['One Punch', 'Arcane', 'Berserk'];
-    const [categories, setCategories] = useState(['Arcane']);
-
-    // const handleAdd = () => {
-    //     setCategories ( cats => [...cats, 'HunterXHunter'] );
-    // }
-
+    const [ categories, setCategories ] = useState(['Arcane', 'Demon Slayer']);
+    const [ limitNumGifs, setLimitNumGifs ] = useState(2);
+    
     return (
         <>
             <h2>GifExpertApp</h2>
-            <AddCategory setCategories={ setCategories }/>
+            <AddForm setCategories={ setCategories } setLimitNumGifs={ setLimitNumGifs }/>
             <hr />
-            {/* <button onClick = { handleAdd } >Agregar</button> */}
-
             <ol>
                 {
                     categories.map( category => (
-                        <GifGrid key={ category } category={ category }/>
+                        <GifGrid key={ category } category={ category } limitNumGifs={ limitNumGifs }/>
                     ))
                 }
             </ol>
         </>
     );
 }
-
 export default GifExpertApp;

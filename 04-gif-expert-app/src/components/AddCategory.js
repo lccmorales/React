@@ -18,6 +18,7 @@ export const AddCategory = ( {setCategories} ) => {
 
     return (
         <form onSubmit={ handleSubmit }>
+            <h3>Busqueda</h3>
             <input
                 type="text"
                 value={ inputValue }
