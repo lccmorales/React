@@ -7,15 +7,17 @@ export const AddForm = ( { setCategories, setLimitNumGifs } ) => {
 
     const handleInputSearchChange = (e) => {
         setInputValueSearch(e.target.value);
+        console.log('handleInputSearchChange - llamado');
     }
 
     const handleInputLimitChange = (e) => {
         setInputValueLimit(e.target.value);
+        console.log('handleInputLimitChange - llamado');
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        
+        console.log('handleSubmit - llamado', inputValueSearch);
         if (inputValueSearch.trim().length > 3 && parseInt(inputValueLimit.trim()) > 0) {
             setCategories( cats => [ inputValueSearch, ...cats,] );
             setInputValueSearch('');
@@ -26,6 +28,8 @@ export const AddForm = ( { setCategories, setLimitNumGifs } ) => {
 
     return (
         <form onSubmit={ handleSubmit }>
+            <p>{ inputValueSearch }</p>
+            <p>{ inputValueLimit }</p>
             <h3>Busqueda</h3>
             <input
                 type="text"
