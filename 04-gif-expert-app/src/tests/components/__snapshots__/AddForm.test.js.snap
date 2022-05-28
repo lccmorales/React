@@ -10,6 +10,7 @@ exports[`Pruebas en <AddForm /> debe de mostrarse correctamente 1`] = `
     Busqueda
   </h3>
   <input
+    className="search"
     onChange={[Function]}
     type="text"
     value=""

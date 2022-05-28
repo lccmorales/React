@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { AddForm } from './components/AddForm';
 import { GifGrid } from './components/GifGrid';
 
-const GifExpertApp = () => {
-    const [ categories, setCategories ] = useState(['Arcane', 'Demon Slayer']);
+export const GifExpertApp = ( { defaultCategories = []} ) => {
+    const [ categories, setCategories ] = useState( defaultCategories );
     const [ limitNumGifs, setLimitNumGifs ] = useState(2);
     
     return (
@@ -21,4 +21,3 @@ const GifExpertApp = () => {
         </>
     );
 }
-export default GifExpertApp;

@@ -9,8 +9,8 @@ describe('Pruebas en <AddForm />', () => {
     let wrapper = shallow( <AddForm setCategories={ setCategories } setLimitNumGifs={ setLimitNumGifs } />);
 
     beforeEach(() => {
-        jest.clearAllMocks();
-        wrapper = shallow( <AddForm setCategories={ setCategories } setLimitNumGifs={ setLimitNumGifs } />);
+        // jest.clearAllMocks();
+        // wrapper = shallow( <AddForm setCategories={ setCategories } setLimitNumGifs={ setLimitNumGifs } />);
     });
 
     test('debe de mostrarse correctamente', () => {
@@ -20,7 +20,7 @@ describe('Pruebas en <AddForm />', () => {
     test('debe de cambiar la caja de texto de Categorias', () => {
         const inputCategorias = wrapper.find('input').at(0);
         const value = 'Hola Mundo';
-        inputCategorias.simulate('change', { target: { value: value }});
+        inputCategorias.simulate('change', { target: { value }});
         expect( wrapper.find('p').at(0).text().trim() ).toBe( value );
     })
 
@@ -31,8 +31,20 @@ describe('Pruebas en <AddForm />', () => {
         expect( wrapper.find('p').at(1).text().trim() ).toBe( value );
     })
 
-    test('NO debe de postear la información con submit', () => {
+    // test('NO debe de postear la información con submit', () => {
+    //     wrapper.find('form').simulate('submit', { preventDefault(){} });
+    //     expect( setCategories ).not.toHaveBeenCalled();
+    // })
+
+    test('debe de llamar el setCategories y limpiar la caja de texto', () => {
+        const value = 'Hola Mundo';
+        // 1. simular el inputChange
+        wrapper.find('.search').simulate('change', { target: { value }});
+        // 2. simular el submit
         wrapper.find('form').simulate('submit', { preventDefault(){} });
-        expect( setCategories ).not.toHaveBeenCalled();
+        // 3. setCategories se debe de haber llamado
+        expect( setCategories ).toHaveBeenCalledWith( expect.any(Function));
+        // 4. el valor del input debe de estar ''
+        expect( wrapper.find('input').at(0).prop('value') ).toBe('');
     })
 })

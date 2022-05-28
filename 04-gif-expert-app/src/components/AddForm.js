@@ -32,6 +32,7 @@ export const AddForm = ( { setCategories, setLimitNumGifs } ) => {
             <p>{ inputValueLimit }</p>
             <h3>Busqueda</h3>
             <input
+                className='search'
                 type="text"
                 value={ inputValueSearch }
                 onChange={ handleInputSearchChange }
