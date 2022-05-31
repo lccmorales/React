@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en <AddForm /> debe de mostrarse correctamente 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <p />
+  <p />
+  <h3>
+    Busqueda
+  </h3>
+  <input
+    className="search"
+    onChange={[Function]}
+    type="text"
+    value=""
+  />
+  <h3>
+    Cantidad de Gif's a mostrar
+  </h3>
+  <input
+    onChange={[Function]}
+    type="number"
+    value=""
+  />
+  <button
+    type="submit"
+  >
+    Buscar
+  </button>
+</form>
+`;

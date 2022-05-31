@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en GifGridItem.js debe de mostrar <GifGridItem /> correctamente 1`] = `
+<div
+  className="card animate__animated animate__swing"
+>
+  <img
+    alt="Dance Jinx GIF LOL"
+    src="https://media0.giphy.com/media/PM7EBVwNHRuXYKIsJf/giphy-downsized-medium.gif?cid=96007aa4ac1qtu0yql3o5v70s2q3y3v7g3erl7sdkx2qbts0&rid=giphy-downsized-medium.gif&ct=g"
+  />
+  <p>
+    Dance Jinx GIF LOL
+  </p>
+</div>
+`;

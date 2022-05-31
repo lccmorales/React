@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pruebas en GifGrid.js debe de mostrar <GifGrid /> correctamente 1`] = `
+<Fragment>
+  <h3
+    className="animate__animated animate__flash"
+  >
+    Arcane
+  </h3>
+  <p
+    className="animate__animated animate__flash"
+  >
+    Loading
+  </p>
+  <div
+    className="card-grid"
+  />
+</Fragment>
+`;
+
+exports[`Pruebas en GifGrid.js debe de mostrar items cuando se cargan imágenes useFetchGifs 1`] = `
+<Fragment>
+  <h3
+    className="animate__animated animate__flash"
+  >
+    Arcane
+  </h3>
+  <div
+    className="card-grid"
+  >
+    <GifGridItem
+      id="PM7EBVwNHRuXYKIsJf"
+      key="PM7EBVwNHRuXYKIsJf"
+      title="Dance Jinx GIF LOL"
+      url="https://media0.giphy.com/media/PM7EBVwNHRuXYKIsJf/giphy-downsized-medium.gif?cid=96007aa4ac1qtu0yql3o5v70s2q3y3v7g3erl7sdkx2qbts0&rid=giphy-downsized-medium.gif&ct=g"
+    />
+  </div>
+</Fragment>
+`;
