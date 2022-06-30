@@ -5,7 +5,7 @@ describe('Pruebas en 05-funciones.js', () => {
     test('getUser debe de retornar un objeto', () => {
         const userTest = {
             uid: 'ABC123',
-            username: 'CSWEB'
+            username: 'Prueba'
         };
         const user = getUser();
         expect ( user ).toEqual( userTest);

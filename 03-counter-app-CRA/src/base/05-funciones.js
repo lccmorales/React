@@ -18,7 +18,7 @@ const saludar4 = () => `Hola Mundo`;
 
 export const getUser = () => ({
     uid: 'ABC123',
-    username: 'CSWEB'
+    username: 'PRUEBA'
 });
 
 // const user = getUser();
