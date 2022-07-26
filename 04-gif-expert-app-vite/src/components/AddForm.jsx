@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import PropTypes from 'prop-types';
 
-export const AddForm = ( { setCategories, setLimitNumGifs } ) => {
+export const AddForm = ({ onNewForm }) => {
     const [inputValueSearch, setInputValueSearch] = useState('');
     const [inputValueLimit, setInputValueLimit] = useState('');
 
@@ -19,17 +18,18 @@ export const AddForm = ( { setCategories, setLimitNumGifs } ) => {
         e.preventDefault();
         console.log('handleSubmit - llamado', inputValueSearch);
         if (inputValueSearch.trim().length > 3 && parseInt(inputValueLimit.trim()) > 0) {
-            setCategories( cats => [ inputValueSearch, ...cats,] );
+            // setCategories( cats => [ inputValueSearch, ...cats,] );
+            // setLimitNumGifs( parseInt(inputValueLimit) );
+            onNewForm( inputValueSearch.trim(), inputValueLimit.trim() );
             setInputValueSearch('');
-            setLimitNumGifs( parseInt(inputValueLimit) );
             setInputValueLimit('');
         }
     }
 
     return (
         <form onSubmit={ handleSubmit }>
-            <p>{ inputValueSearch }</p>
-            <p>{ inputValueLimit }</p>
+            {/* <p>{ inputValueSearch }</p>
+            <p>{ inputValueLimit }</p> */}
             <h3>Busqueda</h3>
             <input
                 className='search'
@@ -49,8 +49,3 @@ export const AddForm = ( { setCategories, setLimitNumGifs } ) => {
         </form>
     )
 }
-
-AddForm.propTypes = {
-    setCategories: PropTypes.func.isRequired,
-    setLimitNumGifs: PropTypes.func.isRequired
-};
