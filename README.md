@@ -1,4 +1,4 @@
-# Practice Repository for React
+# Repositorio para practicar React
 
 Ejercicios de practica para el curso de React
 <p>https://www.udemy.com/course/react-cero-experto</p>
@@ -20,7 +20,7 @@ Este proyecto cuenta con dos ramas principales (branches)
 - Postman, puede usar en su lugar una Extensión de VSC llamada Thunder Client
 
 # Configurar GIT
-`Nota importante: realizar este proceso solamente si es el primer proyecto con el que trabaja con GIT.` 
+`Nota importante: realizar este proceso solamente si es su primer proyecto GIT.`
 
 - Para configurar su usuario en las variables globales de Git y de ese modo se utilice a partir de ese momento en cualquier otro proyecto Git.
 Ejecutar los siguientes comandos en consola:
