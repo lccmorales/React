@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { AddForm } from './components/AddForm';
-import { GifGrid } from './components/GifGrid';
+import { AddForm, GifGrid } from './components';
 
 export const GifExpertApp = ( { defaultCategories = []} ) => {
     const [ categories, setCategories ] = useState( defaultCategories );
@@ -29,4 +28,3 @@ export const GifExpertApp = ( { defaultCategories = []} ) => {
         </>
     );
 }
-
