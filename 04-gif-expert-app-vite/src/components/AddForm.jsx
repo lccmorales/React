@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 export const AddForm = ({ onNewForm }) => {
     const [inputValueSearch, setInputValueSearch] = useState('');
     const [inputValueLimit, setInputValueLimit] = useState('');
 
-    const handleInputSearchChange = (e) => {
-        setInputValueSearch(e.target.value);
-        console.log('handleInputSearchChange - llamado');
+    const handleInputSearchChange = ({ target }) => {
+        setInputValueSearch(target.value);
+        // console.log('handleInputSearchChange - llamado');
     }
 
-    const handleInputLimitChange = (e) => {
-        setInputValueLimit(e.target.value);
-        console.log('handleInputLimitChange - llamado');
+    const handleInputLimitChange = ({ target }) => {
+        setInputValueLimit(target.value);
+        // console.log('handleInputLimitChange - llamado');
     }
 
     const handleSubmit = (e) => {
@@ -27,12 +28,13 @@ export const AddForm = ({ onNewForm }) => {
     }
 
     return (
-        <form onSubmit={ handleSubmit }>
+        <form onSubmit={ handleSubmit } aria-label='form'>
             {/* <p>{ inputValueSearch }</p>
             <p>{ inputValueLimit }</p> */}
             <h3>Busqueda</h3>
             <input
-                className='search'
+                className='txtSearch'
+                aria-label='txtSearch'
                 type="text"
                 value={ inputValueSearch }
                 onChange={ handleInputSearchChange }
@@ -40,6 +42,8 @@ export const AddForm = ({ onNewForm }) => {
 
             <h3>Cantidad de Gif's a mostrar</h3>
             <input
+                className='txtAmount'
+                aria-label='txtAmount'
                 type="number"
                 value={ inputValueLimit }
                 onChange={ handleInputLimitChange }
@@ -48,4 +52,8 @@ export const AddForm = ({ onNewForm }) => {
             <button type="submit">Buscar</button>
         </form>
     )
+}
+
+AddForm.propTypes = {
+    onNewForm: PropTypes.func.isRequired
 }

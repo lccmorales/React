@@ -3,7 +3,7 @@ import { getGifs } from '../helpers/getGifs';
 
 export const useFetchGifs = ( category, limitNumGifs ) => {
     const [state, setState] = useState({
-        data: [],
+        images: [],
         loading: true
     });
 
@@ -11,12 +11,12 @@ export const useFetchGifs = ( category, limitNumGifs ) => {
         getGifs( category, limitNumGifs )
             .then( imgs => {
                 setState({
-                    data: imgs,
+                    images: imgs,
                     loading: false
                 });
             });
     }, [ category, limitNumGifs ]);
 
 
-    return state; // {data: [], loading: true}
+    return state; // {images: [], loading: true}
 }
