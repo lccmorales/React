@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { AddForm, GifGrid } from './components';
 
-export const GifExpertApp = ( { defaultCategories = []} ) => {
+export const GifExpertApp = ({ defaultCategories = [] }) => {
     const [ categories, setCategories ] = useState( defaultCategories );
-    const [ limitNumGifs, setLimitNumGifs ] = useState(2);
+    const [ limitNumGifs, setLimitNumGifs ] = useState( 2 );
     
     const onAddForm = ( newCategory, newLimitNumGif ) => {
         console.log(newCategory, ' - ', newLimitNumGif);

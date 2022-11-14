@@ -8,7 +8,7 @@ export const GifGrid = ( { category, limitNumGifs } ) => {
 
     return (
         <>
-        <h3 className='animate__animated animate__flash'>{ category }</h3>
+        <h3 className='animate__animated animate__flash' aria-label='titulo'>{ category }</h3>
 
         { loading && <p className='animate__animated animate__flash'>Cargando...</p> }
         
