@@ -3,7 +3,7 @@ import { TodoAdd } from './TodoAdd';
 import { TodoList } from './TodoList';
 
 export const TodoApp = () => {
-  const { state, todosCount, pendingTodosCount, handleDelete, handleNewTodo, handleToggleTodo} = useTodo();
+  const { state, todosCount, pendingTodosCount, handleDelete, handleNewTodo, handleToggleTodo } = useTodo();
   return (
     <div>
       <h1>TodoApp: { todosCount }, <small>Pendientes: { pendingTodosCount }</small></h1>
