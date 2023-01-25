@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Message } from './Message';
 
 export const SimpleForm = () => {
-  const [formState, setFormState] = useState({
+  const [ formState, setFormState ] = useState({
     name: '',
     email: '',
   });
@@ -15,16 +15,16 @@ export const SimpleForm = () => {
 
   useEffect(() => {
     // console.log('FormState cambio')
-  }, [formState]);
+  }, [ formState ]);
 
   useEffect(() => {
     // console.log('Email cambio')
-  }, [email]);
+  }, [ email ]);
 
   const handleInputChange = ({ target }) => {
     setFormState({
       ...formState,
-      [target.name]: target.value,
+      [ target.name ]: target.value,
     });
   };
 
@@ -40,8 +40,8 @@ export const SimpleForm = () => {
           className='form-control'
           placeholder='Tu nombre'
           autoComplete='off'
-          value={name}
-          onChange={handleInputChange}
+          value={ name }
+          onChange={ handleInputChange }
         />
       </div>
 
@@ -52,12 +52,12 @@ export const SimpleForm = () => {
           className='form-control mt-2'
           placeholder='email@ejemplo.com'
           autoComplete='off'
-          value={email}
-          onChange={handleInputChange}
+          value={ email }
+          onChange={ handleInputChange }
         />
       </div>
 
-      {name === '123' && <Message />}
+      { name === '123' && <Message /> }
     </>
   );
 };

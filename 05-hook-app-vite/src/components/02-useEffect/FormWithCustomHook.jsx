@@ -8,12 +8,12 @@ export const FormWithCustomHook = () => {
     password: '',
   });
 
-  const [mostrarError, setMostrarError] = useState(0);
+  const [ mostrarError, setMostrarError ] = useState(0);
   //   const { name, email, password } = formValues;
 
   useEffect(() => {
     setMostrarError(0);
-  }, [formValues]);
+  }, [ formValues ]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -25,7 +25,7 @@ export const FormWithCustomHook = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={ handleSubmit }>
       <h1>FormWithCustomHook</h1>
       <hr />
 
@@ -36,8 +36,8 @@ export const FormWithCustomHook = () => {
           className='form-control'
           placeholder='Tu nombre'
           autoComplete='off'
-          value={name}
-          onChange={onHandleInputChange}
+          value={ name }
+          onChange={ onHandleInputChange }
         />
       </div>
 
@@ -48,8 +48,8 @@ export const FormWithCustomHook = () => {
           className='form-control'
           placeholder='email@ejemplo.com'
           autoComplete='off'
-          value={email}
-          onChange={onHandleInputChange}
+          value={ email }
+          onChange={ onHandleInputChange }
         />
       </div>
 
@@ -59,8 +59,8 @@ export const FormWithCustomHook = () => {
           name='password'
           className='form-control'
           placeholder='********'
-          value={password}
-          onChange={onHandleInputChange}
+          value={ password }
+          onChange={ onHandleInputChange }
         />
       </div>
 
@@ -68,11 +68,11 @@ export const FormWithCustomHook = () => {
         Guardar
       </button>
 
-      <button type='button' onClick={onHandleReset} className='btn btn-danger mt-2'>
+      <button type='button' onClick={ onHandleReset } className='btn btn-danger mt-2'>
         Borrar
       </button>
 
-      {mostrarError === 1 && <div>Todos los campos son requeridos.</div>}
+      { mostrarError === 1 && <div>Todos los campos son requeridos.</div> }
     </form>
   );
 };
