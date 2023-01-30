@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { TodoApp } from './components/08-useReducer/TodoApp';
+import { BrowserRouter } from 'react-router-dom';
+import { MainApp } from './components/09-useContext/MainApp';
+// import { TodoApp } from './components/08-useReducer/TodoApp';
 // import './components/08-useReducer/intro-reducer';
 // import { Padre } from './components/07-tarea-memo/Padre';
 // import { CallbackHook } from './components/06-memos/CallbackHook';
@@ -52,9 +54,11 @@ class ErrorBoundary extends React.Component {
 }
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <ErrorBoundary>
-      <TodoApp />
-    </ErrorBoundary>
-  </React.StrictMode>
+  <BrowserRouter>
+    {/* <React.StrictMode> */}
+      <ErrorBoundary>
+        <MainApp />
+      </ErrorBoundary>
+    {/* </React.StrictMode> */}
+  </BrowserRouter>
 );
